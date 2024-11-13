@@ -5,7 +5,7 @@ pipeline {
     }
     environment {
         // 'openjdk-17' JDK의 경로를 자동으로 설정
-        JAVA_HOME = tool name: 'openjdk-17', type: 'JDK'
+        JAVA_HOME = "tool openjdk-17"
         PATH = "${JAVA_HOME}/bin:${env.PATH}"  // JAVA_HOME에 맞춰 PATH 설정
     }
     stages {
