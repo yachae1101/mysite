@@ -12,6 +12,8 @@ pipeline {
         stage('jdk-17 확인') {
             steps {
                 sh 'java -version'  // JAVA_HOME 설정 확인
+                sh 'echo $JAVA_HOME'
+                sh 'echo $PATH'
             }
         }
         stage("Permission") {
