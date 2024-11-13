@@ -4,7 +4,7 @@ pipeline {
         jdk 'openjdk-17'  // 설정한 JDK 이름
     }
     environment {
-        JAVA_HOME = tool name: 'openjdk-17', type: 'JDK'
+        JAVA_HOME = "tool openjdk-17"
     }
     stages {
         stage('jdk-17 확인') {
