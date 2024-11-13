@@ -18,9 +18,8 @@ pipeline {
                 sh './gradlew -version'
             }
         }
-        stage('gradle 이 사용하는 JAVA 버전 확인') {
+        stage('gradle 초기화') {
             steps {
-                sh './gradlew -version'
                 sh './gradlew --stop'
                 sh './gradlew clean'
                 sh './gradlew build --no-daemon'
