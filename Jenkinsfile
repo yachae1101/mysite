@@ -18,14 +18,13 @@ pipeline {
                 sh './gradlew -version'
             }
         }
-        stage('gradle 초기화') {
-            steps {
-                sh './gradlew --stop'
-                sh './gradlew clean'
-                sh './gradlew build --no-daemon'
-
-            }
-        }
+//         stage('gradle 초기화') {
+//             steps {
+//                 sh './gradlew --stop'
+//                 sh './gradlew clean'
+//                 sh './gradlew build --no-daemon'
+//             }
+//         }
         stage("Compile") {
             steps {
                 sh './gradlew compileJava'
