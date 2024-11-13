@@ -8,14 +8,14 @@ pipeline {
                 sh 'echo $PATH'
             }
         }
-        stage('gradle 이 사용하는 JAVA 버전 확인') {
-            steps {
-                sh './gradlew -version'
-            }
-        }
         stage("Permission") {
             steps {
                 sh "chmod +x ./gradlew"
+            }
+        }
+        stage('gradle 이 사용하는 JAVA 버전 확인') {
+            steps {
+                sh './gradlew -version'
             }
         }
         stage("Compile") {
