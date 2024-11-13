@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://43.200.180.10:3306/mysite
+    username: bh
+    password: rapa7630
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
