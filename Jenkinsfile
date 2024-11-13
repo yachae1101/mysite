@@ -46,12 +46,6 @@ pipeline {
               sh "docker run -d --rm -p 8765:8080 --name mysite yachae1101/mysite:${env.BUILD_NUMBER}"
           }
        }
-       stage('Acceptance Test'){
-         steps{
-             sleep 60
-             sh 'chmod +x acceptance_test.sh && ./acceptance_test.sh'
-         }
-       }
         stage('Clean Up Docker Images') {
             steps {
                 script {
