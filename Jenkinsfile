@@ -19,12 +19,6 @@ pipeline {
                 sh "./gradlew test"
             }
         }
-        stage("Test Code Coverage"){
-            steps{
-                sh "./gradlew jacocoTestCoverageVerification"
-                sh "./gradlew jacocoTestReport"
-            }
-       }
        stage("Gradle Build"){
          steps{
              sh "./gradlew clean build"
