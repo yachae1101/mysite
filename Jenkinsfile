@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        jdk 'openjdk-17'  // 설정한 JDK 이름
+    }
     stages {
         stage("Permission") {
             steps {
@@ -21,6 +24,5 @@ pipeline {
                 sh "./gradlew clean build"
             }
         }
-
     }
 }

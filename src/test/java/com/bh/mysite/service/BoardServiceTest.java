@@ -33,26 +33,6 @@
 //
 //    @Test
 //    void enrollBoard() {
-//        // given
-//        BoardDTO boardDTO = BoardDTO.builder()
-//                .title("New Post")
-//                .body("This is a new post.")
-//                .views(10)
-//                .postedTime(LocalDateTime.now())
-//                .build();
-//
-//        Board board = Board.builder()
-//                .title("New Post")
-//                .body("This is a new post.")
-//                .views(10)
-//                .postedTime(Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()))  // 예시로 게시 시간 추가
-//                .build();
-//
-//        // when
-//        boardService.enrollBoard(boardDTO);
-//
-//        // then
-//        verify(boardRepository, times(1)).save(board);  // repository의 save() 메서드가 한 번 호출되었는지 확인
 //    }
 //
 //    @Test
@@ -62,12 +42,14 @@
 //                .title("First Post")
 //                .body("First body")
 //                .views(10)
+//                .postedTime(Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()))
 //                .build();
 //
 //        Board board2 = Board.builder()
 //                .title("Second Post")
 //                .body("Second body")
 //                .views(5)
+//                .postedTime(Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()))
 //                .build();
 //
 //        List<Board> expectedBoards = Arrays.asList(board1, board2);
