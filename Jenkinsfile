@@ -23,6 +23,7 @@ pipeline {
                 sh './gradlew --stop'
                 sh './gradlew clean'
                 sh './gradlew build --no-daemon'
+
             }
         }
         stage("Compile") {
