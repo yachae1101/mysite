@@ -9,8 +9,9 @@ pipeline {
     stages {
         stage('jdk-17 확인') {
             steps {
+                sh 'java -version'
                 sh '${JAVA_HOME}/bin/java -version'
-                sh '${JAVA_HOME}/bin/javac -version'
+                sh 'java -version'
             }
         }
         stage("Permission") {
